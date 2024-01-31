@@ -17,7 +17,8 @@
   "dependencies": {
     "@hapi/boom": "9.x.x",
     "@hapipal/haute-couture": "4.x.x",
-    "joi": "17.x.x"
+    "joi": "17.x.x",
+    "mysql2": "^3.9.0"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
@@ -33,7 +34,7 @@
     "@hapipal/hpal-debug": "2.x.x",
     "@hapipal/toys": "3.x.x",
     "babel-eslint": "10.x.x",
-    "dotenv": "8.x.x",
+    "dotenv": "^8.6.0",
     "eslint": "7.x.x",
     "exiting": "6.x.x",
     "hapi-swagger": "14.x.x"
