@@ -3,7 +3,7 @@
 const Glue = require('@hapi/glue');
 const Exiting = require('exiting');
 const Manifest = require('./manifest');
-const startAllConsumers = require("../lib/consumer/consumer");
+const StartAllConsumers = require('../lib/consumer/consumer');
 
 exports.deployment = async ({ start } = {}) => {
 
@@ -13,7 +13,8 @@ exports.deployment = async ({ start } = {}) => {
     if (start) {
         await Exiting.createManager(server).start();
         server.log(['start'], `Server started at ${server.info.uri}`);
-        await startAllConsumers();
+        // await server.initialize();
+        await StartAllConsumers(server);
         return server;
     }
 
